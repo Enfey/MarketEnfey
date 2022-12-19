@@ -1,0 +1,21 @@
+Imports System.Net.Mail
+
+Public Class Form1
+
+Private Sub SendEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SendEmail.Click
+Dim Mail As New MailMessage
+Mail.Subject = “First Email”
+Mail.To.Add(“Email1“)
+Mail.From = New MailAddress(“Email2“)
+Mail.Body = “First Email Through VB.net — www.TheEngineeringProjects.com”
+
+Dim smtp As New SmtpClient(“smtp.gmail.com”)
+smtp.EnableSsl = True
+smtp.Credentials = New System.Net.NetworkCredential(“Email2“, “Password“)
+smtp.Port = “587”
+smtp.Send(Mail)
+
+End Sub
+
+End Class
+
