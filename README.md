@@ -1,8 +1,8 @@
 # MarketEnfey
 
-## Hi! This is just a quick guide to whats going on in this monolithic mess that is the beating heart of my coursework <br>
+## Hi! This is just a quick guide to whats going on in this monolithic mess that is the beating heart of my coursework (if you're a stranger, ignore how much of a mess this is, i wrote 90% of it when i had no clue what i was doing) <br>
 
-There are 16 forms in total but only forms leverage the power of the OleDb update stuff. These are as follows:<br>
+There are 16 forms in total but only forms leverage the power of the OleDb update classes and methods. These are as follows:<br>
 
 1. ***Customers***: Updating and adding customers.
 2. ***Employees***: Updating and adding employees.
