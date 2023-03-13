@@ -26,8 +26,8 @@ Partial Class OrderSearch
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrderSearch))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.CustIDTxtBx = New System.Windows.Forms.TextBox()
-        Me.CustIDSearchBtn = New System.Windows.Forms.Button()
+        Me.CustomerIDTxtBx = New System.Windows.Forms.TextBox()
+        Me.SearchCustomerIDBtn = New System.Windows.Forms.Button()
         Me.PostalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FreelanceDatabaseDataSet1 = New ProjectCode.FreelanceDatabaseDataSet1()
         Me.PostalTableAdapter = New ProjectCode.FreelanceDatabaseDataSet1TableAdapters.PostalTableAdapter()
@@ -40,44 +40,47 @@ Partial Class OrderSearch
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BackBtn = New System.Windows.Forms.Button()
         Me.DateSearchTxtBx = New System.Windows.Forms.TextBox()
         Me.OrderComboBox = New System.Windows.Forms.ComboBox()
-        Me.OrderByDateRadioButton = New System.Windows.Forms.RadioButton()
         Me.DateSearchRadioButton = New System.Windows.Forms.RadioButton()
         Me.CustomerRadioButton = New System.Windows.Forms.RadioButton()
-        CType(Me.PostalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FreelanceDatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PostalResult, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.SearchAndSortBtn = New System.Windows.Forms.Button()
+        Me.RefreshBtn = New System.Windows.Forms.Button()
+        Me.enablecomplexsearchbtn = New System.Windows.Forms.Button()
+        Me.DisableComplexSearchBtn = New System.Windows.Forms.Button()
+        CType(Me.PostalBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.FreelanceDatabaseDataSet1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PostalResult,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
-        'CustIDTxtBx
+        'CustomerIDTxtBx
         '
-        Me.CustIDTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.CustIDTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CustIDTxtBx.Location = New System.Drawing.Point(271, 247)
-        Me.CustIDTxtBx.Name = "CustIDTxtBx"
-        Me.CustIDTxtBx.Size = New System.Drawing.Size(278, 44)
-        Me.CustIDTxtBx.TabIndex = 15
+        Me.CustomerIDTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.CustomerIDTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerIDTxtBx.Location = New System.Drawing.Point(271, 247)
+        Me.CustomerIDTxtBx.Name = "CustomerIDTxtBx"
+        Me.CustomerIDTxtBx.Size = New System.Drawing.Size(278, 44)
+        Me.CustomerIDTxtBx.TabIndex = 15
         '
-        'CustIDSearchBtn
+        'SearchCustomerIDBtn
         '
-        Me.CustIDSearchBtn.BackColor = System.Drawing.Color.Transparent
-        Me.CustIDSearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.CustIDSearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CustIDSearchBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CustIDSearchBtn.Image = CType(resources.GetObject("CustIDSearchBtn.Image"), System.Drawing.Image)
-        Me.CustIDSearchBtn.Location = New System.Drawing.Point(59, 491)
-        Me.CustIDSearchBtn.Name = "CustIDSearchBtn"
-        Me.CustIDSearchBtn.Size = New System.Drawing.Size(206, 82)
-        Me.CustIDSearchBtn.TabIndex = 22
-        Me.CustIDSearchBtn.UseVisualStyleBackColor = False
+        Me.SearchCustomerIDBtn.BackColor = System.Drawing.Color.Transparent
+        Me.SearchCustomerIDBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SearchCustomerIDBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SearchCustomerIDBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchCustomerIDBtn.Image = CType(resources.GetObject("SearchCustomerIDBtn.Image"), System.Drawing.Image)
+        Me.SearchCustomerIDBtn.Location = New System.Drawing.Point(59, 491)
+        Me.SearchCustomerIDBtn.Name = "SearchCustomerIDBtn"
+        Me.SearchCustomerIDBtn.Size = New System.Drawing.Size(206, 82)
+        Me.SearchCustomerIDBtn.TabIndex = 22
+        Me.SearchCustomerIDBtn.UseVisualStyleBackColor = False
         '
         'PostalBindingSource
         '
@@ -197,18 +200,18 @@ Partial Class OrderSearch
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
         '
-        'Button1
+        'BackBtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(969, 515)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(206, 91)
-        Me.Button1.TabIndex = 50
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BackBtn.BackColor = System.Drawing.Color.Transparent
+        Me.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackBtn.Image = CType(resources.GetObject("BackBtn.Image"), System.Drawing.Image)
+        Me.BackBtn.Location = New System.Drawing.Point(969, 515)
+        Me.BackBtn.Name = "BackBtn"
+        Me.BackBtn.Size = New System.Drawing.Size(206, 91)
+        Me.BackBtn.TabIndex = 50
+        Me.BackBtn.UseVisualStyleBackColor = False
         '
         'DateSearchTxtBx
         '
@@ -229,19 +232,6 @@ Partial Class OrderSearch
         Me.OrderComboBox.Name = "OrderComboBox"
         Me.OrderComboBox.Size = New System.Drawing.Size(279, 45)
         Me.OrderComboBox.TabIndex = 52
-        '
-        'OrderByDateRadioButton
-        '
-        Me.OrderByDateRadioButton.AutoSize = True
-        Me.OrderByDateRadioButton.BackColor = System.Drawing.Color.Transparent
-        Me.OrderByDateRadioButton.BackgroundImage = Global.ProjectCode.My.Resources.Resources.background
-        Me.OrderByDateRadioButton.ForeColor = System.Drawing.Color.White
-        Me.OrderByDateRadioButton.Location = New System.Drawing.Point(254, 418)
-        Me.OrderByDateRadioButton.Name = "OrderByDateRadioButton"
-        Me.OrderByDateRadioButton.Size = New System.Drawing.Size(14, 13)
-        Me.OrderByDateRadioButton.TabIndex = 53
-        Me.OrderByDateRadioButton.TabStop = True
-        Me.OrderByDateRadioButton.UseVisualStyleBackColor = False
         '
         'DateSearchRadioButton
         '
@@ -269,20 +259,81 @@ Partial Class OrderSearch
         Me.CustomerRadioButton.TabStop = True
         Me.CustomerRadioButton.UseVisualStyleBackColor = False
         '
+        'SearchAndSortBtn
+        '
+        Me.SearchAndSortBtn.BackColor = System.Drawing.Color.Transparent
+        Me.SearchAndSortBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SearchAndSortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SearchAndSortBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchAndSortBtn.Image = CType(resources.GetObject("SearchAndSortBtn.Image"), System.Drawing.Image)
+        Me.SearchAndSortBtn.Location = New System.Drawing.Point(271, 491)
+        Me.SearchAndSortBtn.Name = "SearchAndSortBtn"
+        Me.SearchAndSortBtn.Size = New System.Drawing.Size(206, 82)
+        Me.SearchAndSortBtn.TabIndex = 56
+        Me.SearchAndSortBtn.UseVisualStyleBackColor = False
+        '
+        'RefreshBtn
+        '
+        Me.RefreshBtn.BackColor = System.Drawing.Color.Transparent
+        Me.RefreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RefreshBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RefreshBtn.FlatAppearance.BorderSize = 0
+        Me.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RefreshBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RefreshBtn.Image = CType(resources.GetObject("RefreshBtn.Image"), System.Drawing.Image)
+        Me.RefreshBtn.Location = New System.Drawing.Point(751, 487)
+        Me.RefreshBtn.Name = "RefreshBtn"
+        Me.RefreshBtn.Size = New System.Drawing.Size(82, 48)
+        Me.RefreshBtn.TabIndex = 73
+        Me.RefreshBtn.UseVisualStyleBackColor = False
+        '
+        'enablecomplexsearchbtn
+        '
+        Me.enablecomplexsearchbtn.BackColor = System.Drawing.Color.Transparent
+        Me.enablecomplexsearchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.enablecomplexsearchbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.enablecomplexsearchbtn.FlatAppearance.BorderSize = 0
+        Me.enablecomplexsearchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.enablecomplexsearchbtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.enablecomplexsearchbtn.Image = CType(resources.GetObject("enablecomplexsearchbtn.Image"), System.Drawing.Image)
+        Me.enablecomplexsearchbtn.Location = New System.Drawing.Point(751, 536)
+        Me.enablecomplexsearchbtn.Name = "enablecomplexsearchbtn"
+        Me.enablecomplexsearchbtn.Size = New System.Drawing.Size(82, 48)
+        Me.enablecomplexsearchbtn.TabIndex = 74
+        Me.enablecomplexsearchbtn.UseVisualStyleBackColor = False
+        '
+        'DisableComplexSearchBtn
+        '
+        Me.DisableComplexSearchBtn.BackColor = System.Drawing.Color.Transparent
+        Me.DisableComplexSearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.DisableComplexSearchBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DisableComplexSearchBtn.FlatAppearance.BorderSize = 0
+        Me.DisableComplexSearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DisableComplexSearchBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisableComplexSearchBtn.Image = CType(resources.GetObject("DisableComplexSearchBtn.Image"), System.Drawing.Image)
+        Me.DisableComplexSearchBtn.Location = New System.Drawing.Point(751, 536)
+        Me.DisableComplexSearchBtn.Name = "DisableComplexSearchBtn"
+        Me.DisableComplexSearchBtn.Size = New System.Drawing.Size(82, 48)
+        Me.DisableComplexSearchBtn.TabIndex = 75
+        Me.DisableComplexSearchBtn.UseVisualStyleBackColor = false
+        '
         'OrderSearch
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PowderBlue
         Me.BackgroundImage = Global.ProjectCode.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(1187, 618)
-        Me.ControlBox = False
+        Me.ControlBox = false
+        Me.Controls.Add(Me.DisableComplexSearchBtn)
+        Me.Controls.Add(Me.enablecomplexsearchbtn)
+        Me.Controls.Add(Me.RefreshBtn)
+        Me.Controls.Add(Me.SearchAndSortBtn)
         Me.Controls.Add(Me.CustomerRadioButton)
         Me.Controls.Add(Me.DateSearchRadioButton)
-        Me.Controls.Add(Me.OrderByDateRadioButton)
         Me.Controls.Add(Me.OrderComboBox)
         Me.Controls.Add(Me.DateSearchTxtBx)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BackBtn)
         Me.Controls.Add(Me.DateSearchBtn)
         Me.Controls.Add(Me.DateOrderBtn)
         Me.Controls.Add(Me.PostalResult)
@@ -292,25 +343,25 @@ Partial Class OrderSearch
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.CustIDSearchBtn)
-        Me.Controls.Add(Me.CustIDTxtBx)
+        Me.Controls.Add(Me.SearchCustomerIDBtn)
+        Me.Controls.Add(Me.CustomerIDTxtBx)
         Me.Name = "OrderSearch"
         Me.Text = "Enfey's Market Management System"
-        CType(Me.PostalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FreelanceDatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PostalResult, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.PostalBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.FreelanceDatabaseDataSet1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PostalResult,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
-    Friend WithEvents CustIDTxtBx As TextBox
-    Friend WithEvents CustIDSearchBtn As Button
+End Sub
+    Friend WithEvents CustomerIDTxtBx As TextBox
+    Friend WithEvents SearchCustomerIDBtn As Button
     Friend WithEvents FreelanceDatabaseDataSet1 As FreelanceDatabaseDataSet1
     Friend WithEvents PostalBindingSource As BindingSource
     Friend WithEvents PostalTableAdapter As FreelanceDatabaseDataSet1TableAdapters.PostalTableAdapter
@@ -323,10 +374,13 @@ Partial Class OrderSearch
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BackBtn As Button
     Friend WithEvents DateSearchTxtBx As TextBox
     Friend WithEvents OrderComboBox As ComboBox
-    Friend WithEvents OrderByDateRadioButton As RadioButton
     Friend WithEvents DateSearchRadioButton As RadioButton
     Friend WithEvents CustomerRadioButton As RadioButton
+    Friend WithEvents SearchAndSortBtn As Button
+    Friend WithEvents RefreshBtn As Button
+    Friend WithEvents enablecomplexsearchbtn As Button
+    Friend WithEvents DisableComplexSearchBtn As Button
 End Class

@@ -1,54 +1,34 @@
-﻿Imports System.Data.OleDb
-Imports System.Text.RegularExpressions
-Public Class SimpleCustomerSearch
-    Dim conn As New OleDbConnection("Provider=microsoft.ACE.OLEDB.12.0;Data Source=C:\computingg1 (3)\computingg1\computing coursework\ProjectCode\freelancedatabase.accdb")
+﻿Public Class SimpleCustomerSearch
     Private Sub SimpleCustomerSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            Dim ds As New DataSet
-            Dim dt As New DataTable
-            ds.Tables.Add(dt)
-            Dim dbadapter As New OleDbDataAdapter("SELECT * FROM Customers", conn)
-            dbadapter.Fill(dt)
+        dataGridFill("SELECT * FROM Customers", New DataTable, CustomerDgv)
 
-            CustomerResult.DataSource = dt.DefaultView
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        For Each column As DataGridViewColumn In CustomerDgv.Columns
+            column.SortMode = DataGridViewColumnSortMode.NotSortable
+        Next
+        CustomerDgv.ReadOnly = True
     End Sub
 
-    Private Sub WeightSearchBtn_Click(sender As Object, e As EventArgs) Handles CustomerSearchBtn.Click
-        Dim customerid As String = CustomerIDTxtBx.Text
-        Dim idpattern As String = "^[N]{1}[0-9]{4}$"
-        Dim idRegEx As New Regex(idpattern)
-        If idRegEx.IsMatch(customerid) = False Then
-            MessageBox.Show("Please enter a valid customer ID")
+    Private Sub WeightSearchBtn_Click(sender As Object, e As EventArgs) Handles SearchCustomerBtn.Click
+        If customerIDCheck(CustomerIDTxtBx.Text) = False Then
+            MsgBox($"" & CustomerIDTxtBx.Text & " is not a valid customer ID, please enter in the format N followed by 4 digits")
+            CustomerIDTxtBx.Clear()
+            CustomerIDTxtBx.Focus()
         Else
-            Try
-                Dim temp As Integer
-                temp = 0
-
-                For i As Integer = 0 To CustomerResult.Rows.Count - 1
-                    For j As Integer = 0 To CustomerResult.Columns.Count - 1
-                        If CustomerResult.Rows(i).Cells(j).Value = CustomerIDTxtBx.Text Then
-                            CustomerResult.Rows(i).Selected = True
-                            CustomerResult.CurrentCell = CustomerResult.Rows(i).Cells(j)
-                            temp = 1
-                            MsgBox("Customer found")
-                            Exit For
-                        End If
-                    Next
-                Next
-
-                If temp = 0 Then
-                    MsgBox("customer not found")
-                Else
-                    GC.Collect()
-                End If
-
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
+            Dim result = RecursiveBinarySearch(CustomerDgv, CustomerIDTxtBx.Text, 0, CustomerDgv.Rows.Count - 1)
+            If result = True Then
+                MsgBox("Customer found!")
+            Else
+                MsgBox("Customer not found, please try again.")
+                CustomerIDTxtBx.Clear()
+                CustomerIDTxtBx.Focus()
+            End If
         End If
+    End Sub
+
+    Private Sub ExitBtn_click(sender As Object, e As EventArgs) Handles BackBtn.Click
+        me.hide()
+        clearAllControls(Me)
+        dataGridFill("SELECT * FROM Customers", New DataTable, CustomerDgv)
+        customers.show()
     End Sub
 End Class

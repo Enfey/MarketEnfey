@@ -24,18 +24,18 @@ Partial Class Products
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Products))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ProdQuantityTxtBx = New System.Windows.Forms.TextBox()
-        Me.ProdPriceTxtBx = New System.Windows.Forms.TextBox()
-        Me.ProdGenreTxtBx = New System.Windows.Forms.TextBox()
-        Me.ProdNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.QuantityTxtBx = New System.Windows.Forms.TextBox()
+        Me.PriceTxtBx = New System.Windows.Forms.TextBox()
+        Me.GenreTxtBx = New System.Windows.Forms.TextBox()
+        Me.ProductNameTxtBx = New System.Windows.Forms.TextBox()
         Me.ProductIdTxtBx = New System.Windows.Forms.TextBox()
         Me.PrevBtn = New System.Windows.Forms.Button()
         Me.NextBtn = New System.Windows.Forms.Button()
         Me.ClearBtn = New System.Windows.Forms.Button()
         Me.AddBtn = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ExitBtn = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -43,61 +43,61 @@ Partial Class Products
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.ShowGraphBtn = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox6,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox7,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"),System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(-7, -2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1201, 29)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'ProdQuantityTxtBx
+        'QuantityTxtBx
         '
-        Me.ProdQuantityTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.ProdQuantityTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdQuantityTxtBx.Location = New System.Drawing.Point(282, 306)
-        Me.ProdQuantityTxtBx.Name = "ProdQuantityTxtBx"
-        Me.ProdQuantityTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.ProdQuantityTxtBx.TabIndex = 20
+        Me.QuantityTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.QuantityTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QuantityTxtBx.Location = New System.Drawing.Point(282, 306)
+        Me.QuantityTxtBx.Name = "QuantityTxtBx"
+        Me.QuantityTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.QuantityTxtBx.TabIndex = 20
         '
-        'ProdPriceTxtBx
+        'PriceTxtBx
         '
-        Me.ProdPriceTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.ProdPriceTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdPriceTxtBx.Location = New System.Drawing.Point(282, 262)
-        Me.ProdPriceTxtBx.Name = "ProdPriceTxtBx"
-        Me.ProdPriceTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.ProdPriceTxtBx.TabIndex = 21
+        Me.PriceTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.PriceTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PriceTxtBx.Location = New System.Drawing.Point(282, 262)
+        Me.PriceTxtBx.Name = "PriceTxtBx"
+        Me.PriceTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.PriceTxtBx.TabIndex = 21
         '
-        'ProdGenreTxtBx
+        'GenreTxtBx
         '
-        Me.ProdGenreTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.ProdGenreTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdGenreTxtBx.Location = New System.Drawing.Point(282, 174)
-        Me.ProdGenreTxtBx.Name = "ProdGenreTxtBx"
-        Me.ProdGenreTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.ProdGenreTxtBx.TabIndex = 22
+        Me.GenreTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.GenreTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GenreTxtBx.Location = New System.Drawing.Point(282, 218)
+        Me.GenreTxtBx.Name = "GenreTxtBx"
+        Me.GenreTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.GenreTxtBx.TabIndex = 22
         '
-        'ProdNameTxtBx
+        'ProductNameTxtBx
         '
-        Me.ProdNameTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.ProdNameTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdNameTxtBx.Location = New System.Drawing.Point(282, 218)
-        Me.ProdNameTxtBx.Name = "ProdNameTxtBx"
-        Me.ProdNameTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.ProdNameTxtBx.TabIndex = 23
+        Me.ProductNameTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.ProductNameTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductNameTxtBx.Location = New System.Drawing.Point(282, 174)
+        Me.ProductNameTxtBx.Name = "ProductNameTxtBx"
+        Me.ProductNameTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.ProductNameTxtBx.TabIndex = 23
         '
         'ProductIdTxtBx
         '
@@ -164,19 +164,19 @@ Partial Class Products
         Me.AddBtn.TabIndex = 32
         Me.AddBtn.UseVisualStyleBackColor = False
         '
-        'BtnDelete
+        'DeleteBtn
         '
-        Me.BtnDelete.BackColor = System.Drawing.Color.Transparent
-        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelete.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Image = CType(resources.GetObject("BtnDelete.Image"), System.Drawing.Image)
-        Me.BtnDelete.Location = New System.Drawing.Point(630, 337)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(205, 81)
-        Me.BtnDelete.TabIndex = 33
-        Me.BtnDelete.UseVisualStyleBackColor = False
+        Me.DeleteBtn.BackColor = System.Drawing.Color.Transparent
+        Me.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteBtn.Image = CType(resources.GetObject("DeleteBtn.Image"), System.Drawing.Image)
+        Me.DeleteBtn.Location = New System.Drawing.Point(630, 337)
+        Me.DeleteBtn.Name = "DeleteBtn"
+        Me.DeleteBtn.Size = New System.Drawing.Size(205, 81)
+        Me.DeleteBtn.TabIndex = 33
+        Me.DeleteBtn.UseVisualStyleBackColor = False
         '
         'UpdateBtn
         '
@@ -192,18 +192,18 @@ Partial Class Products
         Me.UpdateBtn.TabIndex = 34
         Me.UpdateBtn.UseVisualStyleBackColor = False
         '
-        'Button2
+        'ExitBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(970, 529)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 77)
-        Me.Button2.TabIndex = 36
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ExitBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitBtn.Image = CType(resources.GetObject("ExitBtn.Image"), System.Drawing.Image)
+        Me.ExitBtn.Location = New System.Drawing.Point(970, 529)
+        Me.ExitBtn.Name = "ExitBtn"
+        Me.ExitBtn.Size = New System.Drawing.Size(205, 77)
+        Me.ExitBtn.TabIndex = 36
+        Me.ExitBtn.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -274,28 +274,28 @@ Partial Class Products
         Me.PictureBox8.TabIndex = 43
         Me.PictureBox8.TabStop = False
         '
-        'Button1
+        'ShowGraphBtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(731, 424)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(205, 82)
-        Me.Button1.TabIndex = 44
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ShowGraphBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ShowGraphBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ShowGraphBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ShowGraphBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ShowGraphBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShowGraphBtn.Image = CType(resources.GetObject("ShowGraphBtn.Image"), System.Drawing.Image)
+        Me.ShowGraphBtn.Location = New System.Drawing.Point(731, 424)
+        Me.ShowGraphBtn.Name = "ShowGraphBtn"
+        Me.ShowGraphBtn.Size = New System.Drawing.Size(205, 82)
+        Me.ShowGraphBtn.TabIndex = 44
+        Me.ShowGraphBtn.UseVisualStyleBackColor = false
         '
         'Products
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ProjectCode.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(1187, 618)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
+        Me.ControlBox = false
+        Me.Controls.Add(Me.ShowGraphBtn)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
@@ -303,48 +303,48 @@ Partial Class Products
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ExitBtn)
         Me.Controls.Add(Me.UpdateBtn)
-        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.AddBtn)
         Me.Controls.Add(Me.ClearBtn)
         Me.Controls.Add(Me.NextBtn)
         Me.Controls.Add(Me.PrevBtn)
         Me.Controls.Add(Me.ProductIdTxtBx)
-        Me.Controls.Add(Me.ProdNameTxtBx)
-        Me.Controls.Add(Me.ProdGenreTxtBx)
-        Me.Controls.Add(Me.ProdPriceTxtBx)
-        Me.Controls.Add(Me.ProdQuantityTxtBx)
+        Me.Controls.Add(Me.ProductNameTxtBx)
+        Me.Controls.Add(Me.GenreTxtBx)
+        Me.Controls.Add(Me.PriceTxtBx)
+        Me.Controls.Add(Me.QuantityTxtBx)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.Name = "Products"
         Me.Text = "Enfey's Market Management System"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox6,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox7,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ProdQuantityTxtBx As TextBox
-    Friend WithEvents ProdPriceTxtBx As TextBox
-    Friend WithEvents ProdGenreTxtBx As TextBox
-    Friend WithEvents ProdNameTxtBx As TextBox
+    Friend WithEvents QuantityTxtBx As TextBox
+    Friend WithEvents PriceTxtBx As TextBox
+    Friend WithEvents GenreTxtBx As TextBox
+    Friend WithEvents ProductNameTxtBx As TextBox
     Friend WithEvents ProductIdTxtBx As TextBox
     Friend WithEvents PrevBtn As Button
     Friend WithEvents NextBtn As Button
     Friend WithEvents ClearBtn As Button
     Friend WithEvents AddBtn As Button
-    Friend WithEvents BtnDelete As Button
+    Friend WithEvents DeleteBtn As Button
     Friend WithEvents UpdateBtn As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ExitBtn As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
@@ -352,5 +352,5 @@ Partial Class Products
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ShowGraphBtn As Button
 End Class

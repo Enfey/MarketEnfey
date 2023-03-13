@@ -24,14 +24,14 @@ Partial Class Employees
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Employees))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.SecretQuestion = New System.Windows.Forms.TextBox()
+        Me.SecretQuestionTxtBx = New System.Windows.Forms.TextBox()
         Me.EmployeePasswordTxtBx = New System.Windows.Forms.TextBox()
         Me.PostcodeTxtBx = New System.Windows.Forms.TextBox()
         Me.EmailTxtBx = New System.Windows.Forms.TextBox()
-        Me.Admin = New System.Windows.Forms.TextBox()
-        Me.SecretAnswer = New System.Windows.Forms.TextBox()
+        Me.AdminStatusTxtBx = New System.Windows.Forms.TextBox()
+        Me.SecretAnswerTxtBx = New System.Windows.Forms.TextBox()
         Me.AddressTxtBx = New System.Windows.Forms.TextBox()
-        Me.ContactNumberTxtBx = New System.Windows.Forms.TextBox()
+        Me.PhoneTxtBx = New System.Windows.Forms.TextBox()
         Me.FirstNameTxtBx = New System.Windows.Forms.TextBox()
         Me.SurnameTxtBx = New System.Windows.Forms.TextBox()
         Me.EmployeeIdTxtBx = New System.Windows.Forms.TextBox()
@@ -40,8 +40,8 @@ Partial Class Employees
         Me.AddBtn = New System.Windows.Forms.Button()
         Me.ClearBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DeleteBtn = New System.Windows.Forms.Button()
+        Me.ExitBtn = New System.Windows.Forms.Button()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -83,14 +83,14 @@ Partial Class Employees
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'SecretQuestion
+        'SecretQuestionTxtBx
         '
-        Me.SecretQuestion.BackColor = System.Drawing.Color.Lavender
-        Me.SecretQuestion.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecretQuestion.Location = New System.Drawing.Point(285, 215)
-        Me.SecretQuestion.Name = "SecretQuestion"
-        Me.SecretQuestion.Size = New System.Drawing.Size(219, 38)
-        Me.SecretQuestion.TabIndex = 25
+        Me.SecretQuestionTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.SecretQuestionTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecretQuestionTxtBx.Location = New System.Drawing.Point(285, 215)
+        Me.SecretQuestionTxtBx.Name = "SecretQuestionTxtBx"
+        Me.SecretQuestionTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.SecretQuestionTxtBx.TabIndex = 25
         '
         'EmployeePasswordTxtBx
         '
@@ -119,23 +119,23 @@ Partial Class Employees
         Me.EmailTxtBx.Size = New System.Drawing.Size(219, 38)
         Me.EmailTxtBx.TabIndex = 28
         '
-        'Admin
+        'AdminStatusTxtBx
         '
-        Me.Admin.BackColor = System.Drawing.Color.Lavender
-        Me.Admin.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Admin.Location = New System.Drawing.Point(285, 568)
-        Me.Admin.Name = "Admin"
-        Me.Admin.Size = New System.Drawing.Size(219, 38)
-        Me.Admin.TabIndex = 29
+        Me.AdminStatusTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.AdminStatusTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AdminStatusTxtBx.Location = New System.Drawing.Point(285, 568)
+        Me.AdminStatusTxtBx.Name = "AdminStatusTxtBx"
+        Me.AdminStatusTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.AdminStatusTxtBx.TabIndex = 29
         '
-        'SecretAnswer
+        'SecretAnswerTxtBx
         '
-        Me.SecretAnswer.BackColor = System.Drawing.Color.Lavender
-        Me.SecretAnswer.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecretAnswer.Location = New System.Drawing.Point(285, 259)
-        Me.SecretAnswer.Name = "SecretAnswer"
-        Me.SecretAnswer.Size = New System.Drawing.Size(219, 38)
-        Me.SecretAnswer.TabIndex = 30
+        Me.SecretAnswerTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.SecretAnswerTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecretAnswerTxtBx.Location = New System.Drawing.Point(285, 259)
+        Me.SecretAnswerTxtBx.Name = "SecretAnswerTxtBx"
+        Me.SecretAnswerTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.SecretAnswerTxtBx.TabIndex = 30
         '
         'AddressTxtBx
         '
@@ -146,14 +146,14 @@ Partial Class Employees
         Me.AddressTxtBx.Size = New System.Drawing.Size(219, 38)
         Me.AddressTxtBx.TabIndex = 31
         '
-        'ContactNumberTxtBx
+        'PhoneTxtBx
         '
-        Me.ContactNumberTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.ContactNumberTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContactNumberTxtBx.Location = New System.Drawing.Point(285, 391)
-        Me.ContactNumberTxtBx.Name = "ContactNumberTxtBx"
-        Me.ContactNumberTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.ContactNumberTxtBx.TabIndex = 32
+        Me.PhoneTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.PhoneTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PhoneTxtBx.Location = New System.Drawing.Point(285, 391)
+        Me.PhoneTxtBx.Name = "PhoneTxtBx"
+        Me.PhoneTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.PhoneTxtBx.TabIndex = 32
         '
         'FirstNameTxtBx
         '
@@ -252,32 +252,32 @@ Partial Class Employees
         Me.UpdateBtn.TabIndex = 40
         Me.UpdateBtn.UseVisualStyleBackColor = False
         '
-        'BtnDelete
+        'DeleteBtn
         '
-        Me.BtnDelete.BackColor = System.Drawing.Color.Transparent
-        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelete.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Image = CType(resources.GetObject("BtnDelete.Image"), System.Drawing.Image)
-        Me.BtnDelete.Location = New System.Drawing.Point(710, 342)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(205, 81)
-        Me.BtnDelete.TabIndex = 41
-        Me.BtnDelete.UseVisualStyleBackColor = False
+        Me.DeleteBtn.BackColor = System.Drawing.Color.Transparent
+        Me.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteBtn.Image = CType(resources.GetObject("DeleteBtn.Image"), System.Drawing.Image)
+        Me.DeleteBtn.Location = New System.Drawing.Point(710, 342)
+        Me.DeleteBtn.Name = "DeleteBtn"
+        Me.DeleteBtn.Size = New System.Drawing.Size(205, 81)
+        Me.DeleteBtn.TabIndex = 41
+        Me.DeleteBtn.UseVisualStyleBackColor = False
         '
-        'Button2
+        'ExitBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(970, 529)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 77)
-        Me.Button2.TabIndex = 42
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ExitBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitBtn.Image = CType(resources.GetObject("ExitBtn.Image"), System.Drawing.Image)
+        Me.ExitBtn.Location = New System.Drawing.Point(970, 529)
+        Me.ExitBtn.Name = "ExitBtn"
+        Me.ExitBtn.Size = New System.Drawing.Size(205, 77)
+        Me.ExitBtn.TabIndex = 42
+        Me.ExitBtn.UseVisualStyleBackColor = False
         '
         'PictureBox8
         '
@@ -454,8 +454,8 @@ Partial Class Employees
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox8)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.ExitBtn)
+        Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.UpdateBtn)
         Me.Controls.Add(Me.ClearBtn)
         Me.Controls.Add(Me.AddBtn)
@@ -464,14 +464,14 @@ Partial Class Employees
         Me.Controls.Add(Me.EmployeeIdTxtBx)
         Me.Controls.Add(Me.SurnameTxtBx)
         Me.Controls.Add(Me.FirstNameTxtBx)
-        Me.Controls.Add(Me.ContactNumberTxtBx)
+        Me.Controls.Add(Me.PhoneTxtBx)
         Me.Controls.Add(Me.AddressTxtBx)
-        Me.Controls.Add(Me.SecretAnswer)
-        Me.Controls.Add(Me.Admin)
+        Me.Controls.Add(Me.SecretAnswerTxtBx)
+        Me.Controls.Add(Me.AdminStatusTxtBx)
         Me.Controls.Add(Me.EmailTxtBx)
         Me.Controls.Add(Me.PostcodeTxtBx)
         Me.Controls.Add(Me.EmployeePasswordTxtBx)
-        Me.Controls.Add(Me.SecretQuestion)
+        Me.Controls.Add(Me.SecretQuestionTxtBx)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Employees"
@@ -497,14 +497,14 @@ Partial Class Employees
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents SecretQuestion As TextBox
+    Friend WithEvents SecretQuestionTxtBx As TextBox
     Friend WithEvents EmployeePasswordTxtBx As TextBox
     Friend WithEvents PostcodeTxtBx As TextBox
     Friend WithEvents EmailTxtBx As TextBox
-    Friend WithEvents Admin As TextBox
-    Friend WithEvents SecretAnswer As TextBox
+    Friend WithEvents AdminStatusTxtBx As TextBox
+    Friend WithEvents SecretAnswerTxtBx As TextBox
     Friend WithEvents AddressTxtBx As TextBox
-    Friend WithEvents ContactNumberTxtBx As TextBox
+    Friend WithEvents PhoneTxtBx As TextBox
     Friend WithEvents FirstNameTxtBx As TextBox
     Friend WithEvents SurnameTxtBx As TextBox
     Friend WithEvents EmployeeIdTxtBx As TextBox
@@ -513,8 +513,8 @@ Partial Class Employees
     Friend WithEvents AddBtn As Button
     Friend WithEvents ClearBtn As Button
     Friend WithEvents UpdateBtn As Button
-    Friend WithEvents BtnDelete As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents DeleteBtn As Button
+    Friend WithEvents ExitBtn As Button
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox

@@ -23,20 +23,20 @@ Partial Class customers
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(customers))
-        Me.NameTxtBx = New System.Windows.Forms.TextBox()
-        Me.SrnameTxtBx = New System.Windows.Forms.TextBox()
+        Me.FirstNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.SurnameTxtBx = New System.Windows.Forms.TextBox()
         Me.AddressTxtBx = New System.Windows.Forms.TextBox()
-        Me.IdTxtBx = New System.Windows.Forms.TextBox()
+        Me.CustomerIdTxtBx = New System.Windows.Forms.TextBox()
         Me.PhoneTxtBx = New System.Windows.Forms.TextBox()
         Me.EmailTxtBx = New System.Windows.Forms.TextBox()
         Me.PostcodeTxtBx = New System.Windows.Forms.TextBox()
         Me.NextBtn = New System.Windows.Forms.Button()
         Me.PrevBtn = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.AddBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.ClearBtn = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ExitBtn = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
@@ -47,7 +47,7 @@ Partial Class customers
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SearchCustomersBtn = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,23 +60,23 @@ Partial Class customers
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'NameTxtBx
+        'FirstNameTxtBx
         '
-        Me.NameTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.NameTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameTxtBx.Location = New System.Drawing.Point(295, 176)
-        Me.NameTxtBx.Name = "NameTxtBx"
-        Me.NameTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.NameTxtBx.TabIndex = 10
+        Me.FirstNameTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.FirstNameTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FirstNameTxtBx.Location = New System.Drawing.Point(295, 176)
+        Me.FirstNameTxtBx.Name = "FirstNameTxtBx"
+        Me.FirstNameTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.FirstNameTxtBx.TabIndex = 10
         '
-        'SrnameTxtBx
+        'SurnameTxtBx
         '
-        Me.SrnameTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.SrnameTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SrnameTxtBx.Location = New System.Drawing.Point(295, 220)
-        Me.SrnameTxtBx.Name = "SrnameTxtBx"
-        Me.SrnameTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.SrnameTxtBx.TabIndex = 11
+        Me.SurnameTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.SurnameTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SurnameTxtBx.Location = New System.Drawing.Point(295, 220)
+        Me.SurnameTxtBx.Name = "SurnameTxtBx"
+        Me.SurnameTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.SurnameTxtBx.TabIndex = 11
         '
         'AddressTxtBx
         '
@@ -87,14 +87,14 @@ Partial Class customers
         Me.AddressTxtBx.Size = New System.Drawing.Size(219, 38)
         Me.AddressTxtBx.TabIndex = 12
         '
-        'IdTxtBx
+        'CustomerIdTxtBx
         '
-        Me.IdTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.IdTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IdTxtBx.Location = New System.Drawing.Point(295, 132)
-        Me.IdTxtBx.Name = "IdTxtBx"
-        Me.IdTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.IdTxtBx.TabIndex = 13
+        Me.CustomerIdTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.CustomerIdTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerIdTxtBx.Location = New System.Drawing.Point(295, 132)
+        Me.CustomerIdTxtBx.Name = "CustomerIdTxtBx"
+        Me.CustomerIdTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.CustomerIdTxtBx.TabIndex = 13
         '
         'PhoneTxtBx
         '
@@ -151,19 +151,19 @@ Partial Class customers
         Me.PrevBtn.TabIndex = 25
         Me.PrevBtn.UseVisualStyleBackColor = False
         '
-        'BtnDelete
+        'DeleteBtn
         '
-        Me.BtnDelete.BackColor = System.Drawing.Color.Transparent
-        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelete.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Image = CType(resources.GetObject("BtnDelete.Image"), System.Drawing.Image)
-        Me.BtnDelete.Location = New System.Drawing.Point(632, 353)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(205, 81)
-        Me.BtnDelete.TabIndex = 26
-        Me.BtnDelete.UseVisualStyleBackColor = False
+        Me.DeleteBtn.BackColor = System.Drawing.Color.Transparent
+        Me.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteBtn.Image = CType(resources.GetObject("DeleteBtn.Image"), System.Drawing.Image)
+        Me.DeleteBtn.Location = New System.Drawing.Point(632, 353)
+        Me.DeleteBtn.Name = "DeleteBtn"
+        Me.DeleteBtn.Size = New System.Drawing.Size(205, 81)
+        Me.DeleteBtn.TabIndex = 26
+        Me.DeleteBtn.UseVisualStyleBackColor = False
         '
         'AddBtn
         '
@@ -207,18 +207,18 @@ Partial Class customers
         Me.ClearBtn.TabIndex = 29
         Me.ClearBtn.UseVisualStyleBackColor = False
         '
-        'Button2
+        'ExitBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(970, 529)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 77)
-        Me.Button2.TabIndex = 30
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ExitBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitBtn.Image = CType(resources.GetObject("ExitBtn.Image"), System.Drawing.Image)
+        Me.ExitBtn.Location = New System.Drawing.Point(970, 529)
+        Me.ExitBtn.Name = "ExitBtn"
+        Me.ExitBtn.Size = New System.Drawing.Size(205, 77)
+        Me.ExitBtn.TabIndex = 30
+        Me.ExitBtn.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -325,19 +325,19 @@ Partial Class customers
         Me.PictureBox10.TabIndex = 47
         Me.PictureBox10.TabStop = False
         '
-        'Button1
+        'SearchCustomersBtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(742, 440)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(205, 82)
-        Me.Button1.TabIndex = 48
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.SearchCustomersBtn.BackColor = System.Drawing.Color.Transparent
+        Me.SearchCustomersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SearchCustomersBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SearchCustomersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SearchCustomersBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchCustomersBtn.Image = CType(resources.GetObject("SearchCustomersBtn.Image"), System.Drawing.Image)
+        Me.SearchCustomersBtn.Location = New System.Drawing.Point(742, 440)
+        Me.SearchCustomersBtn.Name = "SearchCustomersBtn"
+        Me.SearchCustomersBtn.Size = New System.Drawing.Size(205, 82)
+        Me.SearchCustomersBtn.TabIndex = 48
+        Me.SearchCustomersBtn.UseVisualStyleBackColor = False
         '
         'customers
         '
@@ -347,7 +347,7 @@ Partial Class customers
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1187, 618)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.SearchCustomersBtn)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox8)
@@ -358,20 +358,20 @@ Partial Class customers
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ExitBtn)
         Me.Controls.Add(Me.ClearBtn)
         Me.Controls.Add(Me.UpdateBtn)
         Me.Controls.Add(Me.AddBtn)
-        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.PrevBtn)
         Me.Controls.Add(Me.NextBtn)
         Me.Controls.Add(Me.PostcodeTxtBx)
         Me.Controls.Add(Me.EmailTxtBx)
         Me.Controls.Add(Me.PhoneTxtBx)
-        Me.Controls.Add(Me.IdTxtBx)
+        Me.Controls.Add(Me.CustomerIdTxtBx)
         Me.Controls.Add(Me.AddressTxtBx)
-        Me.Controls.Add(Me.SrnameTxtBx)
-        Me.Controls.Add(Me.NameTxtBx)
+        Me.Controls.Add(Me.SurnameTxtBx)
+        Me.Controls.Add(Me.FirstNameTxtBx)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "customers"
@@ -390,20 +390,20 @@ Partial Class customers
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents NameTxtBx As TextBox
-    Friend WithEvents SrnameTxtBx As TextBox
+    Friend WithEvents FirstNameTxtBx As TextBox
+    Friend WithEvents SurnameTxtBx As TextBox
     Friend WithEvents AddressTxtBx As TextBox
-    Friend WithEvents IdTxtBx As TextBox
+    Friend WithEvents CustomerIdTxtBx As TextBox
     Friend WithEvents PhoneTxtBx As TextBox
     Friend WithEvents EmailTxtBx As TextBox
     Friend WithEvents PostcodeTxtBx As TextBox
     Friend WithEvents NextBtn As Button
     Friend WithEvents PrevBtn As Button
-    Friend WithEvents BtnDelete As Button
+    Friend WithEvents DeleteBtn As Button
     Friend WithEvents AddBtn As Button
     Friend WithEvents UpdateBtn As Button
     Friend WithEvents ClearBtn As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ExitBtn As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
@@ -414,5 +414,5 @@ Partial Class customers
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents SearchCustomersBtn As Button
 End Class

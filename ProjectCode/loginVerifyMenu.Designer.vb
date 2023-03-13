@@ -24,69 +24,69 @@ Partial Class loginVerifyMenu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loginVerifyMenu))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CaptchaBtn = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.Email2FABtn = New System.Windows.Forms.Button()
+        Me.Phone2FABtn = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.ProjectCode.My.Resources.Resources.background
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"),System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(27, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(320, 86)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'CaptchaBtn
+        'Email2FABtn
         '
-        Me.CaptchaBtn.BackColor = System.Drawing.Color.Transparent
-        Me.CaptchaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.CaptchaBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CaptchaBtn.FlatAppearance.BorderSize = 0
-        Me.CaptchaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CaptchaBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CaptchaBtn.Image = CType(resources.GetObject("CaptchaBtn.Image"), System.Drawing.Image)
-        Me.CaptchaBtn.Location = New System.Drawing.Point(231, 126)
-        Me.CaptchaBtn.Name = "CaptchaBtn"
-        Me.CaptchaBtn.Size = New System.Drawing.Size(82, 48)
-        Me.CaptchaBtn.TabIndex = 72
-        Me.CaptchaBtn.UseVisualStyleBackColor = False
+        Me.Email2FABtn.BackColor = System.Drawing.Color.Transparent
+        Me.Email2FABtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Email2FABtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Email2FABtn.FlatAppearance.BorderSize = 0
+        Me.Email2FABtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Email2FABtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Email2FABtn.Image = CType(resources.GetObject("Email2FABtn.Image"), System.Drawing.Image)
+        Me.Email2FABtn.Location = New System.Drawing.Point(231, 126)
+        Me.Email2FABtn.Name = "Email2FABtn"
+        Me.Email2FABtn.Size = New System.Drawing.Size(82, 48)
+        Me.Email2FABtn.TabIndex = 72
+        Me.Email2FABtn.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Phone2FABtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(64, 126)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 47)
-        Me.Button1.TabIndex = 73
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Phone2FABtn.BackColor = System.Drawing.Color.Transparent
+        Me.Phone2FABtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Phone2FABtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Phone2FABtn.FlatAppearance.BorderSize = 0
+        Me.Phone2FABtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Phone2FABtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Phone2FABtn.Image = CType(resources.GetObject("Phone2FABtn.Image"), System.Drawing.Image)
+        Me.Phone2FABtn.Location = New System.Drawing.Point(64, 126)
+        Me.Phone2FABtn.Name = "Phone2FABtn"
+        Me.Phone2FABtn.Size = New System.Drawing.Size(82, 47)
+        Me.Phone2FABtn.TabIndex = 73
+        Me.Phone2FABtn.UseVisualStyleBackColor = false
         '
         'loginVerifyMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ProjectCode.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(381, 187)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.CaptchaBtn)
+        Me.ControlBox = false
+        Me.Controls.Add(Me.Phone2FABtn)
+        Me.Controls.Add(Me.Email2FABtn)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "loginVerifyMenu"
         Me.Text = "Enfey's Market Management System"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents CaptchaBtn As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Email2FABtn As Button
+    Friend WithEvents Phone2FABtn As Button
 End Class

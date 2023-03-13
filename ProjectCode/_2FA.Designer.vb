@@ -25,7 +25,7 @@ Partial Class _2fa
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(_2fa))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.EmailResendBtn = New System.Windows.Forms.Button()
+        Me.ResendBtn = New System.Windows.Forms.Button()
         Me.VerificationTxtBx = New System.Windows.Forms.TextBox()
         Me.VerifyBtn = New System.Windows.Forms.Button()
         Me.ExitBtn = New System.Windows.Forms.Button()
@@ -52,20 +52,20 @@ Partial Class _2fa
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
         '
-        'EmailResendBtn
+        'ResendBtn
         '
-        Me.EmailResendBtn.BackColor = System.Drawing.Color.Transparent
-        Me.EmailResendBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.EmailResendBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EmailResendBtn.FlatAppearance.BorderSize = 0
-        Me.EmailResendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.EmailResendBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailResendBtn.Image = CType(resources.GetObject("EmailResendBtn.Image"), System.Drawing.Image)
-        Me.EmailResendBtn.Location = New System.Drawing.Point(360, 485)
-        Me.EmailResendBtn.Name = "EmailResendBtn"
-        Me.EmailResendBtn.Size = New System.Drawing.Size(209, 76)
-        Me.EmailResendBtn.TabIndex = 71
-        Me.EmailResendBtn.UseVisualStyleBackColor = False
+        Me.ResendBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ResendBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ResendBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ResendBtn.FlatAppearance.BorderSize = 0
+        Me.ResendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ResendBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ResendBtn.Image = CType(resources.GetObject("ResendBtn.Image"), System.Drawing.Image)
+        Me.ResendBtn.Location = New System.Drawing.Point(360, 485)
+        Me.ResendBtn.Name = "ResendBtn"
+        Me.ResendBtn.Size = New System.Drawing.Size(209, 76)
+        Me.ResendBtn.TabIndex = 71
+        Me.ResendBtn.UseVisualStyleBackColor = False
         '
         'VerificationTxtBx
         '
@@ -126,7 +126,7 @@ Partial Class _2fa
         Me.Controls.Add(Me.ExitBtn)
         Me.Controls.Add(Me.VerifyBtn)
         Me.Controls.Add(Me.VerificationTxtBx)
-        Me.Controls.Add(Me.EmailResendBtn)
+        Me.Controls.Add(Me.ResendBtn)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "_2fa"
@@ -140,7 +140,7 @@ Partial Class _2fa
 
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents EmailResendBtn As Button
+    Friend WithEvents ResendBtn As Button
     Friend WithEvents VerificationTxtBx As TextBox
     Friend WithEvents VerifyBtn As Button
     Friend WithEvents ExitBtn As Button

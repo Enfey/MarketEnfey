@@ -10,7 +10,7 @@ Public Class phone2fa
 
         Dim rand As New Random
         code = rand.Next(100000, 999999).ToString
-        Dim toNumber = New PhoneNumber(login.employeephone)
+        Dim toNumber = New PhoneNumber(employeePhone_)
         Dim message = MessageResource.Create(
             toNumber, from:=New PhoneNumber("+12534003915"),
         body:="your code is " & code & " Do not reply to this message, do not share this code with anyone")
@@ -26,31 +26,31 @@ Public Class phone2fa
     End Sub
 
     Private Sub VerifyBtn_Click(sender As Object, e As EventArgs) Handles VerifyBtn.Click
-        If VerificationTxtBx.Text = code And login.accesslevel = True Then
-            MsgBox("Welcome Admin " & login.employeeName)
-            VerificationTxtBx.Clear()
+        If VerificationCodeTxtBx.Text = code And employeeAccessLevel_ = True Then
+            MsgBox("Welcome Admin " & employeeName_)
+            VerificationCodeTxtBx.Clear()
+            Me.Close()
             captcha.Show()
-            Me.Hide()
-        ElseIf VerificationTxtBx.Text = code And login.accesslevel = False Then
-            MsgBox("Welcome " & login.employeeName)
-            VerificationTxtBx.Clear()
+        ElseIf VerificationCodeTxtBx.Text = code And employeeAccessLevel_ = False Then
+            MsgBox("Welcome " & employeeName_)
+            VerificationCodeTxtBx.Clear()
+            Me.Close()
             captcha.Show()
-            Me.Hide()
-        ElseIf verificationtxtbx.text = "" Then
+        ElseIf VerificationCodeTxtBx.text = "" Then
             MsgBox("Please enter the code")
-        ElseIf isnumeric(verificationtxtbx.text) = False Then
+        ElseIf isnumeric(VerificationCodeTxtBx.text) = False Then
             MsgBox("Please a valid verification code, only numerical format is accepted.")
-            VerificationTxtBx.Clear()
-        ElseIf Len(VerificationTxtBx.text) <> 6 Then
-            MsgBox("please enter the corret length of the verification code")
-            VerificationTxtBx.Clear()
+            VerificationCodeTxtBx.Clear()
+        ElseIf Len(VerificationCodeTxtBx.text) <> 6 Then
+            MsgBox("please enter the correct length of the verification code")
+            VerificationCodeTxtBx.Clear()
         Else
             MsgBox("The code is incorrect, please try again")
-            VerificationTxtBx.Clear()
+            VerificationCodeTxtBx.Clear()
         End If
     End Sub
 
-    Private Sub EmailResendBtn_Click(sender As Object, e As EventArgs) Handles EmailResendBtn.Click
+    Private Sub EmailResendBtn_Click(sender As Object, e As EventArgs) Handles ResendBtn.Click
         Try
             phoneverification()
             MsgBox("Text Sent")
@@ -61,7 +61,7 @@ Public Class phone2fa
 
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
         login.Show()
-        Me.Hide()
-        VerificationTxtBx.Clear()
+        me.close()
+        VerificationCodeTxtBx.Clear()
     End Sub
 End Class

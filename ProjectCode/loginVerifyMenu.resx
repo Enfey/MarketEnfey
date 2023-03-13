@@ -121,7 +121,7 @@
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUQAAABTCAIAAABoLOkGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAT2VJREFUeF7tnXd0V9eV72ctrfXeSLwZkFzAgDHVmN7BdAmBQF1IoAYIVSRUQL0C
+        vwAADr8BOAVTJAAAT2VJREFUeF7tnXd0V9eV72ctrfXeSLwZkFzAgDHVmN7BdAmBQF1IoAYIVSRUQL0C
         EhJF9GqaANM7BrfEJXE8cTyJ40xiO/ZkkokdJ7ETJ7aTsWc879/3OXvfe3T1k4RxnjNLEK2112/d37nn
         7rPbd+997q/cvwvye7Sbuqmb7gLqBnM3ddNdQt1g7qZuukuoG8zd1E13CXWDuZu66S6hbjB3UzfdJdQN
         5m7qpruEusHcTd10l1A3mLupm+4SukPBPL0t+Zz10u3P7FLkIzZ067Ne8s7spr8hag9mExD3CHUeH7cY
@@ -463,10 +463,10 @@
         I6eDXeaOywAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="CaptchaBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Email2FABtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFYAAAA0CAIAAACfCFjxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAACKdJREFUaEPtWntQU3ca3ZayUkRARCTlZQQhvMe4SwQFRCtai4IWyqPyCKC8wlNQ
+        vwAADr8BOAVTJAAACKdJREFUaEPtWntQU3ca3ZayUkRARCTlZQQhvMe4SwQFRCtai4IWyqPyCKC8wlNQ
         KnnwEGRM7ogi6mqxtAI2oSLj7S6ubm11YVDHqe6IVRYFXBUkcV2wdH7/7nfvzTvXnQg7s26AOXPm3JPv
         fsk53BsIw2/szFbNcsxVMFfBXAWA2VMBx8BRgqaCJVZsV4avB5PFdo11N6EvSAS5IJ1eXv0KnBf7sZgr
         t3tLsv2+L/S/ZUqARJAL0kFG7cg6FcBjQR4xPL/efL8+EtdVQg//xz6kg4zaLWgqgCuExWTn+P6Y43Mt
@@ -506,10 +506,10 @@
         q2CuAjuzVf8GHcRaJThXS6QAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Phone2FABtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFkAAAAxCAIAAAA+zpLPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAACOdJREFUaEPtWntUE3ca3a3Ww6oVBIHyMIBBQgiCUBUEBNEWq2LR4qOgNoRQMYLI
+        vwAADr8BOAVTJAAACOdJREFUaEPtWntUE3ca3a3Ww6oVBIHyMIBBQgiCUBUEBNEWq2LR4qOgNoRQMYLI
         IygVYngUpCZTQR7LLhUVBUvUNOvs1tfK1hYfuN21PUp9dRFXUZu4LnHpmX/3+80jJMNjANujBTn3fOfO
         zZ3P3MsMGTj+xnZM8EtQeNlFD1520YPR1kVQL6UH/XbhODGQ5yTy9PAO5MXyR9AXJIJckI6VF9B3F672
         vt4eb8QK1Rt9z6bP+IbEP7bQBMGM/8p0me9ZyAXpICMrdR9dgGmO5/IU0flU34upoosjckI6yMiqg90F

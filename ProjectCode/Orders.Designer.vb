@@ -24,21 +24,21 @@ Partial Class Orders
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Orders))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CustIdTxtBx = New System.Windows.Forms.TextBox()
+        Me.CustomerIDTxtBx = New System.Windows.Forms.TextBox()
         Me.TotalTxtBx = New System.Windows.Forms.TextBox()
         Me.QuantityTxtBx = New System.Windows.Forms.TextBox()
         Me.DateTxtBx = New System.Windows.Forms.TextBox()
         Me.EmployeeIDTxtBx = New System.Windows.Forms.TextBox()
-        Me.SaleIdTxtBx = New System.Windows.Forms.TextBox()
+        Me.SalesIDTxtBx = New System.Windows.Forms.TextBox()
         Me.PostalIDtxtBx = New System.Windows.Forms.TextBox()
         Me.PrevBtn = New System.Windows.Forms.Button()
         Me.NextBtn = New System.Windows.Forms.Button()
         Me.ClearBtn = New System.Windows.Forms.Button()
         Me.AddBtn = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ExitBtn = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -48,20 +48,23 @@ Partial Class Orders
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.ReceiptBtn = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SearchOrdersBtn = New System.Windows.Forms.Button()
         Me.EmailConfirmationPicBox = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmailConfirmationPicBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.ProductIdTxtBx = New System.Windows.Forms.TextBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox6,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox7,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox9,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox10,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.EmailConfirmationPicBox,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox11,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'PictureBox1
         '
@@ -72,14 +75,14 @@ Partial Class Orders
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'CustIdTxtBx
+        'CustomerIDTxtBx
         '
-        Me.CustIdTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.CustIdTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CustIdTxtBx.Location = New System.Drawing.Point(293, 177)
-        Me.CustIdTxtBx.Name = "CustIdTxtBx"
-        Me.CustIdTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.CustIdTxtBx.TabIndex = 14
+        Me.CustomerIDTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.CustomerIDTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerIDTxtBx.Location = New System.Drawing.Point(293, 177)
+        Me.CustomerIDTxtBx.Name = "CustomerIDTxtBx"
+        Me.CustomerIDTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.CustomerIDTxtBx.TabIndex = 14
         '
         'TotalTxtBx
         '
@@ -117,14 +120,14 @@ Partial Class Orders
         Me.EmployeeIDTxtBx.Size = New System.Drawing.Size(219, 38)
         Me.EmployeeIDTxtBx.TabIndex = 18
         '
-        'SaleIdTxtBx
+        'SalesIDTxtBx
         '
-        Me.SaleIdTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.SaleIdTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SaleIdTxtBx.Location = New System.Drawing.Point(293, 133)
-        Me.SaleIdTxtBx.Name = "SaleIdTxtBx"
-        Me.SaleIdTxtBx.Size = New System.Drawing.Size(219, 38)
-        Me.SaleIdTxtBx.TabIndex = 19
+        Me.SalesIDTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.SalesIDTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalesIDTxtBx.Location = New System.Drawing.Point(293, 133)
+        Me.SalesIDTxtBx.Name = "SalesIDTxtBx"
+        Me.SalesIDTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.SalesIDTxtBx.TabIndex = 19
         '
         'PostalIDtxtBx
         '
@@ -191,19 +194,19 @@ Partial Class Orders
         Me.AddBtn.TabIndex = 31
         Me.AddBtn.UseVisualStyleBackColor = False
         '
-        'BtnDelete
+        'DeleteBtn
         '
-        Me.BtnDelete.BackColor = System.Drawing.Color.Transparent
-        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDelete.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Image = CType(resources.GetObject("BtnDelete.Image"), System.Drawing.Image)
-        Me.BtnDelete.Location = New System.Drawing.Point(625, 348)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(205, 81)
-        Me.BtnDelete.TabIndex = 32
-        Me.BtnDelete.UseVisualStyleBackColor = False
+        Me.DeleteBtn.BackColor = System.Drawing.Color.Transparent
+        Me.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteBtn.Image = CType(resources.GetObject("DeleteBtn.Image"), System.Drawing.Image)
+        Me.DeleteBtn.Location = New System.Drawing.Point(625, 348)
+        Me.DeleteBtn.Name = "DeleteBtn"
+        Me.DeleteBtn.Size = New System.Drawing.Size(205, 81)
+        Me.DeleteBtn.TabIndex = 32
+        Me.DeleteBtn.UseVisualStyleBackColor = False
         '
         'UpdateBtn
         '
@@ -229,18 +232,18 @@ Partial Class Orders
         Me.PictureBox2.TabIndex = 34
         Me.PictureBox2.TabStop = False
         '
-        'Button2
+        'ExitBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(970, 529)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 77)
-        Me.Button2.TabIndex = 35
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ExitBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitBtn.Image = CType(resources.GetObject("ExitBtn.Image"), System.Drawing.Image)
+        Me.ExitBtn.Location = New System.Drawing.Point(970, 529)
+        Me.ExitBtn.Name = "ExitBtn"
+        Me.ExitBtn.Size = New System.Drawing.Size(205, 77)
+        Me.ExitBtn.TabIndex = 35
+        Me.ExitBtn.UseVisualStyleBackColor = False
         '
         'PictureBox3
         '
@@ -338,39 +341,59 @@ Partial Class Orders
         Me.ReceiptBtn.TabIndex = 61
         Me.ReceiptBtn.UseVisualStyleBackColor = False
         '
-        'Button1
+        'SearchOrdersBtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(836, 430)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(205, 87)
-        Me.Button1.TabIndex = 62
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.SearchOrdersBtn.BackColor = System.Drawing.Color.Transparent
+        Me.SearchOrdersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SearchOrdersBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SearchOrdersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SearchOrdersBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchOrdersBtn.Image = CType(resources.GetObject("SearchOrdersBtn.Image"), System.Drawing.Image)
+        Me.SearchOrdersBtn.Location = New System.Drawing.Point(836, 430)
+        Me.SearchOrdersBtn.Name = "SearchOrdersBtn"
+        Me.SearchOrdersBtn.Size = New System.Drawing.Size(205, 87)
+        Me.SearchOrdersBtn.TabIndex = 62
+        Me.SearchOrdersBtn.UseVisualStyleBackColor = false
         '
         'EmailConfirmationPicBox
         '
         Me.EmailConfirmationPicBox.BackColor = System.Drawing.Color.Transparent
-        Me.EmailConfirmationPicBox.Image = CType(resources.GetObject("EmailConfirmationPicBox.Image"), System.Drawing.Image)
+        Me.EmailConfirmationPicBox.Image = CType(resources.GetObject("EmailConfirmationPicBox.Image"),System.Drawing.Image)
         Me.EmailConfirmationPicBox.Location = New System.Drawing.Point(180, 568)
         Me.EmailConfirmationPicBox.Name = "EmailConfirmationPicBox"
         Me.EmailConfirmationPicBox.Size = New System.Drawing.Size(435, 38)
         Me.EmailConfirmationPicBox.TabIndex = 63
-        Me.EmailConfirmationPicBox.TabStop = False
+        Me.EmailConfirmationPicBox.TabStop = false
+        '
+        'ProductIdTxtBx
+        '
+        Me.ProductIdTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.ProductIdTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ProductIdTxtBx.Location = New System.Drawing.Point(293, 441)
+        Me.ProductIdTxtBx.Name = "ProductIdTxtBx"
+        Me.ProductIdTxtBx.Size = New System.Drawing.Size(219, 38)
+        Me.ProductIdTxtBx.TabIndex = 64
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"),System.Drawing.Image)
+        Me.PictureBox11.Location = New System.Drawing.Point(162, 441)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(125, 38)
+        Me.PictureBox11.TabIndex = 65
+        Me.PictureBox11.TabStop = false
         '
         'Orders
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ProjectCode.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(1187, 618)
-        Me.ControlBox = False
+        Me.ControlBox = false
+        Me.Controls.Add(Me.PictureBox11)
+        Me.Controls.Add(Me.ProductIdTxtBx)
         Me.Controls.Add(Me.EmailConfirmationPicBox)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.SearchOrdersBtn)
         Me.Controls.Add(Me.ReceiptBtn)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox9)
@@ -380,57 +403,58 @@ Partial Class Orders
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ExitBtn)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.UpdateBtn)
-        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.AddBtn)
         Me.Controls.Add(Me.ClearBtn)
         Me.Controls.Add(Me.NextBtn)
         Me.Controls.Add(Me.PrevBtn)
         Me.Controls.Add(Me.PostalIDtxtBx)
-        Me.Controls.Add(Me.SaleIdTxtBx)
+        Me.Controls.Add(Me.SalesIDTxtBx)
         Me.Controls.Add(Me.EmployeeIDTxtBx)
         Me.Controls.Add(Me.DateTxtBx)
         Me.Controls.Add(Me.QuantityTxtBx)
         Me.Controls.Add(Me.TotalTxtBx)
-        Me.Controls.Add(Me.CustIdTxtBx)
+        Me.Controls.Add(Me.CustomerIDTxtBx)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.Name = "Orders"
         Me.Text = "Enfey's Market Management System"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmailConfirmationPicBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox6,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox7,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox9,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox10,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.EmailConfirmationPicBox,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox11,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents CustIdTxtBx As TextBox
+    Friend WithEvents CustomerIDTxtBx As TextBox
     Friend WithEvents TotalTxtBx As TextBox
     Friend WithEvents QuantityTxtBx As TextBox
     Friend WithEvents DateTxtBx As TextBox
     Friend WithEvents EmployeeIDTxtBx As TextBox
-    Friend WithEvents SaleIdTxtBx As TextBox
+    Friend WithEvents SalesIDTxtBx As TextBox
     Friend WithEvents PostalIDtxtBx As TextBox
     Friend WithEvents PrevBtn As Button
     Friend WithEvents NextBtn As Button
     Friend WithEvents ClearBtn As Button
     Friend WithEvents AddBtn As Button
-    Friend WithEvents BtnDelete As Button
+    Friend WithEvents DeleteBtn As Button
     Friend WithEvents UpdateBtn As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ExitBtn As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
@@ -440,6 +464,8 @@ Partial Class Orders
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents ReceiptBtn As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents SearchOrdersBtn As Button
     Friend WithEvents EmailConfirmationPicBox As PictureBox
+    Friend WithEvents ProductIdTxtBx As TextBox
+    Friend WithEvents PictureBox11 As PictureBox
 End Class

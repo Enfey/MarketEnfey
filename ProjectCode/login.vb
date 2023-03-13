@@ -1,193 +1,200 @@
 ﻿Imports System.Data.OleDb
-Imports System.Net.Mail
-Imports System.Text.RegularExpressions
-
 Public Class login
-    Public Shared accesslevel As Boolean ' defines the access level of the user
-    Public Shared employeeEmailstr As String
-    Public Shared employeeName As String
-    Public Shared employeeID As String
-    Public Shared employeephone As String
-    Private Sub passwrdBtn_Click(sender As Object, e As EventArgs) Handles passwrdBtn.Click
+    Private loginAttempts As Integer
+    Private shutdownElapsed As Integer = 0
+    Private controlElapsed As Integer = 0
+    Private Sub WelcomeLoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
+        loginAttempts += 1
+        dim user as string= UsernameTxtBx.Text
+        Dim pass As String = PasswordTxtBx.Text
+
+        If loginAttempts = 3 Then 'if the user has entered the wrong password 3 times, then the program will lock them out for 60 seconds, but only if the username and password are not correct
+            MessageBox.Show("You have entered the wrong login details 3 times, you will be locked out for 60 seconds", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            clearAllControls(Me)
+            controlDisable()
+
+        ElseIf loginAttempts = 5 Then  'if the user has entered the wrong login details 5 times, then the system will shut down, but only if the username and password is not correct
+            MsgBox("You have entered the wrong login details 5 times, the system will shut down in one minute", MsgBoxStyle.Critical, "Error")
+            clearAllControls(Me)
+            systemShut()
+
+        ElseIf user = "" And pass = "" Then
+            MsgBox("please fill in both the user ID and password fields")
+            UsernameTxtBx.focus()
+
+        ElseIf user = "" Then ' selection for if text box is empty
+            MsgBox("please enter the user's ID")
+            UsernameTxtBx.Focus()
+
+        ElseIf EmployeeIDCheck(user) = False Then ' validation to ensure that the format of the id is E followed by 4 digits
+            MsgBox("Please enter a valid user ID")
+            UsernameTxtBx.Clear()
+            PasswordTxtBx.Clear()
+            DoubleEntryTxtBx.Clear()
+
+        ElseIf pass = "" Then ' selection for if text box is empty, give error
+            MsgBox("Please enter a password")
+            PasswordTxtBx.Focus()
+            DoubleEntryTxtBx.Clear()
+
+        ElseIf passwordCheck(pass) = False Then 'selection for if greater than 20, give error
+            MsgBox("Please enter a valid password, between 8 and 30 characters with at least one uppercase letter, one lowercase letter, one number and one special character")
+            PasswordTxtBx.Clear()
+            DoubleEntryTxtBx.Clear()
+
+        ElseIf pass <> DoubleEntryTxtBx.Text Then
+            MsgBox("the passwords do not match, please try again")
+            PasswordTxtBx.Clear()
+            DoubleEntryTxtBx.Clear()
+
+        ElseIf EmployeeIDCheck(user) = True And passwordCheck(pass) = True And pass = doubleentrytxtbx.text Then
+
+            Dim query = "SELECT * FROM Employees WHERE EmployeeID = @ID AND EmployeePassword = @pass"
+            Dim parameters As OleDbParameter() = {
+                                                     New OleDbParameter("@ID", user),
+                                                     New OleDbParameter("@pass", pass)
+                                                 }
+
+            Dim result = ExecuteQueryAndReturnData(query, parameters)
+
+            If result.success Then
+                Dim employeedata = New EmployeeData() '''create new instance of the employeedata class
+                Dim row = result.data(0) '''local version of data returned, needed to populate properties of the employee data class
+
+                '''Populate properties of the employeedata class
+                employeedata.Admin = row("Admin")
+                employeedata.Email = row("Email")
+                employeedata.FirstName = row("First Name")
+                employeedata.EmployeeID = row("EmployeeID")
+                employeedata.ContactNumber = row("ContactNumber")
+                employeedata.Password = row("EmployeePassword")
+
+                If pass = employeedata.password And user = employeedata.employeeID And employeedata.Admin = "1" Then
+                    '''populate global variables
+                    employeeAccessLevel_ = True
+                    employeeID_ = employeedata.employeeID
+                    employeeEmail_ = employeedata.Email
+                    employeePhone_ = employeedata.contactNumber
+                    employeeName_ = employeedata.FirstName
+
+                    loginVerifyMenu.Show()
+                    clearAllControls(Me)
+                    Me.Close()
+
+                ElseIf pass = employeedata.password And user = employeedata.employeeID And employeedata.Admin = "0" Then
+                    '''populate global variables
+                    employeeAccessLevel_ = False
+                    employeeID_ = employeedata.employeeID
+                    employeeEmail_ = employeedata.Email
+                    employeePhone_ = employeedata.contactNumber
+                    employeeName_ = employeedata.FirstName
+
+                    loginVerifyMenu.Show()
+                    clearAllControls(Me)
+                    Me.Close()
+                Else
+                    MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) 'unlikely to ever be shown, because if a non existent username and password is entered, success will evaluate to false, still implemented to ensure graceful error handling
+                    clearAllControls(Me)
+                    UsernameTxtBx.Focus()
+                End If
+            End If
+        Else
+            MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) 'unlikely to ever be shown, because if a non existent username and password is entered, success will evaluate to false, still implemented to ensure graceful error handling
+            clearAllControls(Me)
+            UsernameTxtBx.Focus()
+        End If
+    End Sub
+
+
+    ''' <summary>
+    ''' Shutdown and its timer + background worker
+    ''' </summary>
+    Private Sub systemShut()
+        ProgressBar.Show()
+        ProgressBar.Maximum = 60 'sets the maximum value of the progress bar to the total delay
+        For Each control In Controls
+            If TypeOf control Is ProgressBar Then
+                Continue For
+            Else
+                control.hide()
+            End If
+        Next
+        Shutdown.Start() 'starts the timer
+        BackgroundWorker.RunWorkerAsync() 'starts the background worker
+    End Sub
+    Private Sub ShutdownTimer_Tick(sender As Object, e As EventArgs) Handles Shutdown.Tick
+        shutdownElapsed += 1
+        ProgressBar.Value = shutdownElapsed
+    End Sub
+
+    Private Sub BackgroundWorker_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles BackgroundWorker.DoWork
+        Dim process As New Process()
+        process.StartInfo.FileName = "shutdown.exe"
+        process.StartInfo.Arguments = "/s /t " & 60
+        process.Start()
+    End Sub
+
+
+    ''' <summary>
+    ''' Control disable timer
+    ''' </summary>
+    Private Sub controlDisable()
+        ProgressBar.Show()
+        ProgressBar.Maximum = 60
+        For Each control In Controls
+            If TypeOf control Is ProgressBar Then
+                Continue For
+            Else
+                control.hide()
+            End If
+        Next
+        HideControls.Start()
+    End Sub
+
+    Private Sub HideControls_Tick(sender As Object, e As EventArgs) Handles HideControls.Tick
+        controlElapsed += 1
+        ProgressBar.Value = controlElapsed
+        If controlElapsed = ProgressBar.Maximum Then
+            HideControls.Stop()
+            For Each control In Controls
+                control.show()
+            Next
+            ProgressBar.Hide()
+        End If
+    End Sub
+
+
+
+    Private Sub passwrdBtn_Click(sender As Object, e As EventArgs) Handles ForgotPasswordBtn.Click
         Me.Hide()
+        clearAllControls(Me)
         forgotpassword.Show()
     End Sub
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        Try
-            If (CheckBox1.Checked = True) Then ' if the eye next to the password box is clicked then the password char becomes empty instead of being an asterisk, displaying the actual text rather than it being hidden
-                TxtBxPsword.PasswordChar = String.Empty 'displays the password so it is readable
-                DoubleEntryTxtBx.PasswordChar = String.Empty 'displays the password so it is readable
-                CheckBox1.Image = My.Resources.Resources.eye_open 'changes the eye to being open, linked to the resources.resx file
+    Private Sub PasswordHide_CheckedChanged(sender As Object, e As EventArgs) Handles PasswordHide.CheckedChanged
+        If (PasswordHide.Checked = True) Then
+            PasswordTxtBx.PasswordChar = String.Empty
+            DoubleEntryTxtBx.PasswordChar = String.Empty
+            PasswordHide.Image = My.Resources.Resources.eye_open
 
-            ElseIf (CheckBox1.Checked = False) Then 'if it is clicked again, or if checked is false anyway, then password char is an asterisk hiding the password
-                TxtBxPsword.PasswordChar = "*" 'password is hidden behind asterisks
-                DoubleEntryTxtBx.PasswordChar = "*" 'password is hidden behind asterisks
-                CheckBox1.Image = My.Resources.Resources.eye_close 'changes the eye to being closed, linked to the resources.resx file
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message) 'messages the error to you
-        End Try
+        ElseIf (PasswordHide.Checked = False) Then
+            PasswordTxtBx.PasswordChar = "*"
+            DoubleEntryTxtBx.PasswordChar = "*"
+            PasswordHide.Image = My.Resources.Resources.eye_close
+        End If
     End Sub
 
-    Private Sub WelcomeLoginBtn_Click(sender As Object, e As EventArgs) Handles WelcomeLoginBtn.Click
-        Dim cmd As OleDbCommand 'used in order to make sql queries to get information from the database in access
-        Dim dr As OleDbDataReader 'reads data from the database
-        Dim checker As Integer 'checks to make sure program is working
-        Dim adminstatus As String  'access level from database is read into this string
-        Dim password As String
-
-
-        Dim userid As String = TxtBxUser.Text
-        
-
-        Try
-            conn.Open() 'opens database connection
-
-            cmd = conn.CreateCommand() 'creates the command
-            cmd.CommandType = CommandType.Text 'command string is converted to .text
-            cmd.CommandText = "SELECT * FROM Employees WHERE EmployeeID = '" + TxtBxUser.Text + "' and EmployeePassword = '" + TxtBxPsword.Text + "'" 'defines the query to be used in order to retrieve necessary data from tables in access
-
-            dr = cmd.ExecuteReader() 'executes and returns a datareader object/s using the sql query
-            checker = 0
-
-            Do While (dr.Read())
-                'reads values of items in db into global and local variables, so they can be used in other forms or in this form.
-                adminstatus = dr("Admin") 'access level is equal to data reader object 'admin' in the employees table
-                employeeEmailstr = dr("Email")
-                employeeName = dr("First Name")
-                employeeID = dr("EmployeeID")
-                employeephone = dr("ContactNumber")
-                password = dr("EmployeePassword")
-
-                checker = checker + 1 ' makes sure is working
-            Loop
-
-            dr.Close()
-            conn.close()
-            Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            GC.Collect()
-        End Try
-
-
-        If TxtBxPsword.Text = DoubleEntryTxtBx.Text And (checker) = 1 And adminstatus = "1" And password = TxtBxPsword.Text And employeeID = TxtBxUser.Text Then 'double entry check and if checker has gone up by one which means loop has worked and the connection has closed, and the admin status for that employee is one then it is an admin login
-            accesslevel = True 'access level is true
-            loginVerifyMenu.Show()
-            Me.Hide()
-            TxtBxPsword.Clear()
-            DoubleEntryTxtBx.Clear()
-            TxtBxUser.Clear()
-
-        ElseIf TxtBxPsword.Text = DoubleEntryTxtBx.Text And (checker) = 1 And adminstatus = "0" And password = TxtBxPsword.Text And employeeID = TxtBxUser.Text Then 'double entry check and if checker has gone up by one which means loop has worked and the connection has closed, and the admin status for that employee is zero then it is a normal user login
-            accesslevel = False 'access level is false
-            loginVerifyMenu.Show()
-            Me.Hide()
-            TxtBxPsword.Clear()
-            DoubleEntryTxtBx.Clear()
-            TxtBxUser.Clear()
-
-        ElseIf (checker > 1) Then
-            MsgBox("Duplicated login details")
-            TxtBxUser.Clear() 'clears text box
-            TxtBxPsword.Clear() 'clears text box
-
-
-        ElseIf TxtBxUser.Text = "" And TxtBxPsword.Text = "" Then
-            MsgBox("please fill in both the user ID and password fields")
-
-        ElseIf TxtBxUser.Text = "" Then ' selection for if text box is empty
-            MsgBox("please enter the user's ID")
-        ElseIf EmployeeIDCheck(userid) = False Then ' validation to ensure that the format of the id is E followed by 4 digits
-            MsgBox("Please enter a valid user ID")
-            TxtBxUser.Clear() 'clears text box
-            TxtBxPsword.Clear() 'clears text box
-            DoubleEntryTxtBx.Clear()
-
-        ElseIf TxtBxPsword.Text = "" Then ' selection for if text box is empty, give error
-            MsgBox("Please enter a password")
-            TxtBxPsword.Focus()
-            DoubleEntryTxtBx.Clear()
-
-        ElseIf PasswordCheck(TxtBxPsword.Text) = False Then 'selection for if greater than 20, give error
-            MsgBox("Please enter a valid password, between 8 and 30 characters with at least one uppercase letter, one lowercase letter, one number and one special character")
-            TxtBxPsword.Clear() 'clears text box
-            DoubleEntryTxtBx.Clear()
-            
-        ElseIf TxtBxPsword.Text <> DoubleEntryTxtBx.Text Then
-                MsgBox("the passwords do not match, please try again")
-                TxtBxPsword.Clear()
-                DoubleEntryTxtBx.Clear()
-            Else
-                MsgBox("incorrect login")
-                TxtBxUser.Clear() 'clears text box
-                TxtBxPsword.Clear() 'clears text box
-                DoubleEntryTxtBx.Clear()
-                TxtBxUser.Focus()
-            End If
+    Private Sub loginExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
+        Dim ProgExit As DialogResult 'defines the variable to be able to indicate the return value of a dialog box
+        ProgExit = MessageBox.Show("Are you sure you want to exit?", "",
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If (ProgExit = DialogResult.Yes) Then
+            Application.Exit() ' fully exits program
+        End If
     End Sub
-
-    Private Sub WelcomeExitBtn_Click(sender As Object, e As EventArgs) Handles WelcomeExitBtn.Click
-            Dim ProgExit As DialogResult 'defines the variable to be able to indicate the return value of a dialog box
-            ProgExit = MessageBox.Show("are you sure you want to exit?", "",
-                                      MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-            If (ProgExit = DialogResult.Yes) Then
-                Application.Exit() ' fully exits program
-            End If
-    End Sub
-
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
-        Dim Smtp_Server As New SmtpClient
-        Dim e_mail As New MailMessage()
-        Dim companyemail As New MailAddress("enfeysmarket@outlook.com")
-
-        Smtp_Server.UseDefaultCredentials = False
-        Smtp_Server.Credentials = New Net.NetworkCredential("enfeysmarket@outlook.com", "Ycc87$Nucy4nai4")
-        Smtp_Server.Port = 587
-        Smtp_Server.EnableSsl = True
-        Smtp_Server.Host = "smtp-mail.outlook.com"
-
-        e_mail.From = companyemail
-        e_mail.To.Add("frileykay@outlook.com")
-        e_mail.Subject = "test"
-        e_mail.IsBodyHtml = True
-        e_mail.Body = "<html>
-  <body>
-    <h1>Thank you for your purchase!</h1>
-    <p>Dear [customer name],</p>
-    <p>Thank you for your recent purchase from our online store. Your order details are listed below:</p>
-    <table>
-      <tr>
-        <th>Item</th>
-        <th>Quantity</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Product A</td>
-        <td>2</td>
-        <td>$10.00</td>
-      </tr>
-      <tr>
-        <td>Product B</td>
-        <td>1</td>
-        <td>$5.00</td>
-      </tr>
-      <tr>
-        <td colspan= 2 >Total</td>
-        <td>$15.00</td>
-      </tr>
-    </table>
-    <p>Your order will be shipped to the following address:</p>
-    <p>[shipping address]</p>
-    <p>Thank you for your business. If you have any questions or concerns, please don't hesitate to contact us.</p>
-    <p>Sincerely,</p>
-    <p>[Your name]</p>
-  </body>
-</html>"
-            
-
-        Smtp_Server.Send(e_mail)
+        ProgressBar.Hide()
+        loginAttempts = 0
+        clearAllControls(Me)
     End Sub
 end class
+

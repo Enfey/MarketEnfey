@@ -1,4 +1,4 @@
-﻿Public Class MenuMain
+﻿Public Class MenuMain 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
         Me.Hide() 'hides main menu
         login.Show() 'shows form
@@ -29,7 +29,7 @@
     End Sub
 
     Private Sub MenuMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If login.accesslevel = 0 Then
+        If employeeAccessLevel_ = false Then
             PictureBox3.Hide()
         End If
     End Sub

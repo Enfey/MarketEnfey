@@ -264,6 +264,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalLogic.vb" />
+    <Compile Include="employeeData.vb" />
+    <Compile Include="GlobalVariables.vb" />
     <Compile Include="phone2fa.Designer.vb">
       <DependentUpon>phone2fa.vb</DependentUpon>
     </Compile>
@@ -273,9 +276,7 @@
     <Compile Include="productgraph.Designer.vb">
       <DependentUpon>productgraph.vb</DependentUpon>
     </Compile>
-    <Compile Include="productgraph.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="productgraph.vb" />
     <Compile Include="Reg.vb" />
     <Compile Include="SimpleCustomerSearch.Designer.vb">
       <DependentUpon>SimpleCustomerSearch.vb</DependentUpon>
@@ -304,15 +305,11 @@
     <Compile Include="Employees.Designer.vb">
       <DependentUpon>Employees.vb</DependentUpon>
     </Compile>
-    <Compile Include="Employees.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Employees.vb" />
     <Compile Include="forgotpassword.Designer.vb">
       <DependentUpon>forgotpassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="forgotpassword.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forgotpassword.vb" />
     <Compile Include="FreelanceDatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -360,15 +357,11 @@
     <Compile Include="Orders.Designer.vb">
       <DependentUpon>Orders.vb</DependentUpon>
     </Compile>
-    <Compile Include="Orders.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Orders.vb" />
     <Compile Include="OrderSearch.Designer.vb">
       <DependentUpon>OrderSearch.vb</DependentUpon>
     </Compile>
-    <Compile Include="OrderSearch.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="OrderSearch.vb" />
     <Compile Include="Postal.Designer.vb">
       <DependentUpon>Postal.vb</DependentUpon>
     </Compile>
@@ -482,7 +475,6 @@
     <Content Include="FreelanceDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="icon.ico" />
     <None Include="Resources\add.png" />
     <None Include="Resources\address.png" />
     <None Include="Resources\ajru7ra7r.png" />

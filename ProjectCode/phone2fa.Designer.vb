@@ -25,9 +25,9 @@ Partial Class phone2fa
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(phone2fa))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.VerificationTxtBx = New System.Windows.Forms.TextBox()
+        Me.VerificationCodeTxtBx = New System.Windows.Forms.TextBox()
         Me.VerifyBtn = New System.Windows.Forms.Button()
-        Me.EmailResendBtn = New System.Windows.Forms.Button()
+        Me.ResendBtn = New System.Windows.Forms.Button()
         Me.ExitBtn = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,14 +52,14 @@ Partial Class phone2fa
         Me.PictureBox2.TabIndex = 77
         Me.PictureBox2.TabStop = False
         '
-        'VerificationTxtBx
+        'VerificationCodeTxtBx
         '
-        Me.VerificationTxtBx.BackColor = System.Drawing.Color.Lavender
-        Me.VerificationTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VerificationTxtBx.Location = New System.Drawing.Point(468, 324)
-        Me.VerificationTxtBx.Name = "VerificationTxtBx"
-        Me.VerificationTxtBx.Size = New System.Drawing.Size(262, 44)
-        Me.VerificationTxtBx.TabIndex = 78
+        Me.VerificationCodeTxtBx.BackColor = System.Drawing.Color.Lavender
+        Me.VerificationCodeTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VerificationCodeTxtBx.Location = New System.Drawing.Point(468, 324)
+        Me.VerificationCodeTxtBx.Name = "VerificationCodeTxtBx"
+        Me.VerificationCodeTxtBx.Size = New System.Drawing.Size(262, 44)
+        Me.VerificationCodeTxtBx.TabIndex = 78
         '
         'VerifyBtn
         '
@@ -76,20 +76,20 @@ Partial Class phone2fa
         Me.VerifyBtn.TabIndex = 79
         Me.VerifyBtn.UseVisualStyleBackColor = False
         '
-        'EmailResendBtn
+        'ResendBtn
         '
-        Me.EmailResendBtn.BackColor = System.Drawing.Color.Transparent
-        Me.EmailResendBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.EmailResendBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EmailResendBtn.FlatAppearance.BorderSize = 0
-        Me.EmailResendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.EmailResendBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailResendBtn.Image = CType(resources.GetObject("EmailResendBtn.Image"), System.Drawing.Image)
-        Me.EmailResendBtn.Location = New System.Drawing.Point(360, 485)
-        Me.EmailResendBtn.Name = "EmailResendBtn"
-        Me.EmailResendBtn.Size = New System.Drawing.Size(209, 76)
-        Me.EmailResendBtn.TabIndex = 80
-        Me.EmailResendBtn.UseVisualStyleBackColor = False
+        Me.ResendBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ResendBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ResendBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ResendBtn.FlatAppearance.BorderSize = 0
+        Me.ResendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ResendBtn.Font = New System.Drawing.Font("Sitka Heading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ResendBtn.Image = CType(resources.GetObject("ResendBtn.Image"), System.Drawing.Image)
+        Me.ResendBtn.Location = New System.Drawing.Point(360, 485)
+        Me.ResendBtn.Name = "ResendBtn"
+        Me.ResendBtn.Size = New System.Drawing.Size(209, 76)
+        Me.ResendBtn.TabIndex = 80
+        Me.ResendBtn.UseVisualStyleBackColor = False
         '
         'ExitBtn
         '
@@ -114,9 +114,9 @@ Partial Class phone2fa
         Me.ClientSize = New System.Drawing.Size(1187, 618)
         Me.ControlBox = False
         Me.Controls.Add(Me.ExitBtn)
-        Me.Controls.Add(Me.EmailResendBtn)
+        Me.Controls.Add(Me.ResendBtn)
         Me.Controls.Add(Me.VerifyBtn)
-        Me.Controls.Add(Me.VerificationTxtBx)
+        Me.Controls.Add(Me.VerificationCodeTxtBx)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "phone2fa"
@@ -130,8 +130,8 @@ Partial Class phone2fa
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents VerificationTxtBx As TextBox
+    Friend WithEvents VerificationCodeTxtBx As TextBox
     Friend WithEvents VerifyBtn As Button
-    Friend WithEvents EmailResendBtn As Button
+    Friend WithEvents ResendBtn As Button
     Friend WithEvents ExitBtn As Button
 End Class
