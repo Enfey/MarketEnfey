@@ -5,7 +5,7 @@ Public Class phone2fa
     Dim code As String
     Private Sub phoneverification()
         Const accountSid = "AC59a3a3ce8835cc444d07127964220e93"
-        Const authToken = "5a12b5a8f4765c44df052c5a83735951"
+        Const authToken = ""
         TwilioClient.Init(accountSid, authToken)
 
         Dim rand As New Random
