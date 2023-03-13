@@ -28,7 +28,9 @@ I did try a few more things but i genuinely cannot remember what i did (it'll co
 
 My next planned fix is to create a sep table, and try to mess with that (0 relationships).<br>
 If that fails to work, i'm going to create a new database, and see if the issue is isolated to the external processing occurring in access.<br>
-If all else fails, i'll just create a new VS project, and make sure i dont miss anything when programming it.
+If all else fails, i'll just create a new VS project, and make sure i dont miss anything when programming it.<br>
+
+A quick final note, you'll have to make edits to just boot up main menu after successful login (especially to avoid the captcha), since twilio won't be able to send to your number, and your email isn't in the db either. <br>
 
 Feel free to email or talk to me about this or submit pull requests!<br>
 Thanks!
