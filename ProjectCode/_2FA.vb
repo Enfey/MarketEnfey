@@ -4,7 +4,7 @@ Public Class _2fa
     Private rand As New Random
     Private credentials As New Dictionary(Of String, String) From {
         {"username", "enfeysmarket@outlook.com"},
-        {"password", "Ycc87$Nucy4nai4"}
+        {"password", available on request}
         }
     Private Sub _2fa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         emailSend()
